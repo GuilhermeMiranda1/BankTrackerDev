@@ -1,0 +1,137 @@
+body{
+    margin: 0;
+    font-size: 100%;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+}
+
+section.cover_side{
+    width: 70vw;
+    height: 100vh;
+    background-image: url("../img/img-cover.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.form_side{
+    display: flex;
+    width: 35vw;
+    justify-content: center;
+    align-items: center;
+}
+
+section.form_side .container{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.form_side .container img{
+    width: 30%;
+}
+
+section.form_side .container .btTitle{
+    font-family: Font Awesome;
+    font-size: 2.7em;
+    margin: 15px 0px 10px 0px;
+}
+
+section.form_side .container .inputs_group{
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 20px 0px 20px 0px;
+}
+
+
+section.form_side .container .inputs_group input{
+    width: 100%;
+    height: 70px;
+    border: 2px solid rgba(60, 60, 60, 0.4);
+    border-radius: 5px;
+    font-size: 1.3em;
+    margin: 10px 0px 10px 0px;
+    padding-left: 25px;
+}
+
+section.form_side .container .inputs_group p{
+    font-size: 1.4em;
+    color: rgba(0, 0, 0, 0.9);
+    margin-top: 10px;
+}
+
+section.form_side .container .btLogin{
+    width: 100%;
+    height: 70px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    color: white;
+    margin-top: 16px;
+    background-color: var(--grey);
+}
+
+section.form_side .container .btRegister{
+    font-size: 1.6em;
+    color: rgba(0, 0, 0, 0.9);
+    margin-top: 20px;
+}
+
+/* MEDIA QUERYS */
+@media(max-width: 1400px){
+    body{
+        font-size: 80%;
+    }
+    
+    section.form_side{
+        width: 42vw;
+    }
+
+    section.form_side .container .inputs_group input{
+        height: 55px;
+        border: 1px solid rgba(60, 60, 60, 0.4);
+    }
+
+    section.form_side .container .btLogin{
+        height: 55px;
+    }
+}
+
+@media(max-width: 1000px){
+    body{
+        font-size: 75%;
+    }
+    
+    .cover_side{
+        display: none;
+    }
+
+    section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    section.form_side{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    section.form_side .container{
+        width: 77%;
+    }
+
+    section.form_side .container .inputs_group{
+        margin: 10px 0px 10px 0px;
+    }
+
+    section.form_side .container .inputs_group input{
+        height: 52px;
+    }
+}
