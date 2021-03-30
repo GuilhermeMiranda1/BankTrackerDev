@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    --black: #000;
+    --white: #FCFCFC;
+    --grey: #2F2F2F;
+    --yellow : #F3B700;
+    --red: #D64550;
+}
+
+div.container {
+    display: flex;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+div.title {
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.title h2 {
+    padding: 5px;
+    border-bottom: 3px solid var(--yellow);
+}
