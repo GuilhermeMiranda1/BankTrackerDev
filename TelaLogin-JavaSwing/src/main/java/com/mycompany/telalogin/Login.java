@@ -273,8 +273,9 @@ public class Login extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEntrarActionPerformed
 
     private void btnEntrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEntrarMouseClicked
-
-        if (txtLogin.equals("Banktracker") && txtSenha.equals("urubu100")) {
+        String usuario = txtLogin.getText();
+        String senha = String.valueOf(txtSenha.getPassword());
+        if (usuario.equals("Banktracker") && senha.equals("urubu100")) {
             TelaRelatorio telaRelatorio = new TelaRelatorio();
             System.exit(0);
             telaRelatorio.setVisible(true);
