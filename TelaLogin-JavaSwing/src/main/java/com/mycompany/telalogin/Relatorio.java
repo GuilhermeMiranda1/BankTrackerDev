@@ -40,7 +40,18 @@ public class Relatorio {
         ServicosGroup grupoDeServicos = looca.getGrupoDeServicos();
 
         //infos de uso
-        //ProcessosGroup grupoDeProcessos = looca.getGrupoDeProcessos();
-
+        ProcessosGroup grupoDeProcessos = looca.getGrupoDeProcessos();
+        
+        System.out.println(processador);
+        System.out.println("outra parte");
+        System.out.println(memoria);
+        System.out.println("outra parte");
+        System.out.println(grupoDeServicos);
+        System.out.println("outra parte");
+        System.out.println(grupoDeDiscos);
+        System.out.println("outra parte");
+        System.out.println(grupoDeProcessos);
+        
+        
     }
 }
