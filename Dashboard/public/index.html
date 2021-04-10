@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo-white.png" type="image/x-icon" />  
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/global.css">
+    <title>BankTracker</title>
+</head>
+<body>
+    <section>
+        <section class="cover_side">
+        </section>
+        <section class="form_side">
+            <div class="container">
+                <div class="brand">
+                    <img src="img/logo.png" alt="Logo do Bank Tracker">
+                    <p><span>B</span>ank<span>T</span>racker</p>
+                </div>
+                <div id="message"></div>
+                <div class="inputs_group">
+                    <input type="text" id="email" placeholder="Email">
+                    <input type="text" id="user" placeholder="Usuário">
+                    <input type="password" id="password" placeholder="Senha">
+                    <a id="forgot_password" onclick="forgot_password()">Esqueceu sua senha?</a>
+                </div>
+                <button class="btLogin" onclick="login()">Login</button>
+                <button class="btSend" onclick="send_email()">Prosseguir</button>
+                <a class="btCancel" onclick="back_to_login()">Cancelar</a>
+                <div class="loading_screen">
+                    <p id="loading_message"><span>A</span>guarde um momento</p>
+                    <img id="loading_gif" src="img/loading.gif">
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>
+<script src="script.js"></script>
+

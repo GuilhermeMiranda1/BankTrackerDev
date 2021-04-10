@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    --black: #000;
+    --white: #FCFCFC;
+    --grey: #2F2F2F;
+    --yellow : #F3B700;
+    --red: #D64550;
+}
+
+@font-face { font-family: Font Awesome; src: url('fonts/Font\ Awesome\ 5\ Brands-Regular-400.otf'); } 

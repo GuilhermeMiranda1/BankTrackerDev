@@ -13,6 +13,8 @@ import com.github.britooo.looca.api.group.processos.ProcessosGroup;
 import com.github.britooo.looca.api.group.servicos.ServicosGroup;
 import com.github.britooo.looca.api.group.sistema.Sistema;
 import com.github.britooo.looca.api.group.temperatura.Temperatura;
+import java.util.List;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 /**
  *
@@ -22,35 +24,16 @@ public class Relatorio {
     public static void main(String[] args) {
         Looca looca = new Looca();
         //infos do SO
-        Sistema sistema = looca.getSistema();
 
-        //infos da memória
-        Memoria memoria = looca.getMemoria();
-
-        //infos do processador
-        Processador processador = looca.getProcessador();
-
-        //temperatura do processador
-        Temperatura temperatura = looca.getTemperatura();
-
-        //
-        DiscosGroup grupoDeDiscos = looca.getGrupoDeDiscos();
-
-        //
-        ServicosGroup grupoDeServicos = looca.getGrupoDeServicos();
-
-        //infos de uso
-        ProcessosGroup grupoDeProcessos = looca.getGrupoDeProcessos();
         
-        System.out.println(processador);
-        System.out.println("outra parte");
-        System.out.println(memoria);
-        System.out.println("outra parte");
-        System.out.println(grupoDeServicos);
-        System.out.println("outra parte");
-        System.out.println(grupoDeDiscos);
-        System.out.println("outra parte");
-        System.out.println(grupoDeProcessos);
+        
+        Conexao con = new Conexao();
+
+        //Assistente para executar comandos no BD
+        JdbcTemplate template = new JdbcTemplate(con.getBanco());
+        
+        List resultados = template.queryForList("SELECT * FROM dbo.Banco");
+        System.out.println(resultados);
         
         
     }

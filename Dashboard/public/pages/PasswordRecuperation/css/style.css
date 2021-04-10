@@ -1,0 +1,324 @@
+body{
+    margin: 0;
+    font-size: 90%;
+    overflow: hidden;
+}
+
+span{
+    margin: 0;
+    color: var(--yellow);
+    font-family: Font Awesome;
+}
+
+section{
+    display: flex;
+    flex-direction: row;
+}
+
+section.cover_side{
+    width: 70vw;
+    height: 100vh;
+    background-image: url("../../../img/img-cover.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+section.form_side{
+    display: flex;
+    width: 35vw;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section.form_side .container{
+    display: flex;
+    width: 70%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.form_side .container .brand{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: fade_in 1000ms;
+}
+
+section.form_side .container .brand img{
+    width: 30%;
+}
+
+section.form_side .container .brand p{
+    font-family: Font Awesome;
+    font-size: 2.7em;
+    margin: 15px 0px 10px 0px;
+}
+
+section.form_side .container #message{
+    font-size: 1.4em;
+    text-align: start;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.8);
+    animation: fade_in 2000ms;
+}
+
+section.form_side .container .inputs_group{
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 20px 0px 20px 0px;
+}
+
+section.form_side .container .inputs_group input{
+    width: 100%;
+    height: 65px;
+    border: 1px solid rgba(60, 60, 60, 0.4);
+    border-radius: 5px;
+    font-size: 1.3em;
+    margin: 10px 0px 10px 0px;
+    padding-left: 25px;
+}
+
+section.form_side .container .inputs_group a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: rgba(0, 0, 0, 0.7);
+    margin-top: 10px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+section.form_side .container .inputs_group a:hover{
+    transition: 0.2s;
+    color: var(--yellow);
+}
+
+section.form_side .container button{
+    width: 100%;
+    height: 65px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    color: white;
+    margin-top: 16px;
+    background-color: var(--grey);
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+section.form_side .container .btSend{
+    display: none;
+}
+
+section.form_side .container .btSave:hover, 
+section.form_side .container .btSend:hover{
+    background-color: var(--yellow);
+    transition: 0.2s;
+}
+
+section.form_side .container .loading_screen{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section.form_side .container .loading_screen p{
+    font-family: Font Awesome;
+    font-size: 2.2em;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+    margin: 15px 0px 10px 0px;
+}
+
+section.form_side .container .loading_screen img{
+    width: 20%;
+}
+
+section.form_side .container .btCancel{
+    display: none;
+    text-decoration: none;
+    font-size: 1.4em;
+    color: rgba(0, 0, 0, 0.9);
+    margin-top: 20px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+section.form_side .container .btCancel:hover{
+    transition: 0.2s;
+    color: var(--yellow);
+}
+
+/* MEDIA QUERYS */
+@media(max-width: 1400px){
+    body{
+        font-size: 80%;
+    }
+    
+    section.form_side{
+        width: 42vw;
+    }
+
+    section.form_side .container .inputs_group input{
+        height: 65px;   
+        border: 1px solid rgba(60, 60, 60, 0.4);
+    }
+
+    section.form_side .container .btSave{
+        height: 55px;
+    }
+}
+
+@media(max-width: 1000px){
+    body{
+        font-size: 75%;
+    }
+    
+    .cover_side{
+        display: none;
+    }
+
+    section{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+   
+    section.form_side{
+        width: 100vw;
+        height: 100vh;
+    }
+
+    section.form_side .container{
+        width: 77%;
+    }
+
+    section.form_side .container .inputs_group{
+        margin: 10px 0px 10px 0px;
+    }
+
+    section.form_side .container .inputs_group input{
+        height: 52px;
+    }
+}
+
+/*ANIMATIONS*/
+
+section.cover_side{
+    animation: move_right_in 1000ms backwards;
+}
+
+section.form_side .container .brand img{
+    animation: move 800ms backwards;
+}
+
+section.form_side .container .brand p{
+    animation: move 800ms backwards;
+}
+
+section.form_side .container #message{
+    animation: fade_in 2000ms backwards;
+}
+
+section.form_side .container .inputs_group input:nth-child(1){
+    animation: move_right_in 1000ms backwards;
+}
+
+section.form_side .container .inputs_group input:nth-child(2){
+    animation: move_right_in 1000ms 250ms backwards;
+}
+
+section.form_side .container .inputs_group a{
+    animation: fade_in 1000ms 800ms backwards;
+}
+
+section.form_side .container button{
+    animation: fade_in 1000ms 800ms backwards;
+}
+
+
+section.form_side .container .loading_screen{
+    animation: fade_in 1000ms backwards;
+}
+
+@keyframes fade_in{
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;  
+    }
+} 
+
+@keyframes fade_out{
+    from {
+        opacity: 1;
+    } 
+    to {
+        opacity: 0;  
+    }
+} 
+
+@keyframes move{
+    from {
+        opacity: 0;
+        transform: translateX(-40%);
+      
+    } 
+    to {
+        opacity: 1;  
+        transform: translateX(0%);
+    }
+} 
+
+@keyframes move_right_in{
+    from {
+        opacity: 0;
+        transform: translateX(-40%);
+      
+    } 
+    to {
+        opacity: 1;  
+        transform: translateX(0%);
+    }
+} 
+
+@keyframes move_right_out{
+    from {
+        opacity: 1;
+        transform: translateX(0%);
+      
+    } 
+    to {
+        opacity: 0;  
+        transform: translateX(40%);
+        display: none !important;
+    }
+} 
+
+@keyframes move_left_in{
+    from {
+        opacity: 0;
+        transform: translateX(0%);
+      
+    } 
+    to {
+        opacity: 1;  
+        transform: translateX(-40%);
+    }
+}
+
+@keyframes move_down{
+    from {
+        margin-top: 0px;
+    }
+    to {
+        margin-top: 50%;
+    }
+} 
