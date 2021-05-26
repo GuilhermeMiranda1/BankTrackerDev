@@ -1,0 +1,13 @@
+com/banktracker/cli/SlackBot.class
+com/banktracker/cli/SlackMensagens.class
+com/banktracker/cli/Historico.class
+com/banktracker/cli/App.class
+com/banktracker/cli/FuncionarioSuporte.class
+com/banktracker/cli/Login.class
+com/banktracker/cli/Log.class
+com/banktracker/cli/CaixaEletronico.class
+com/banktracker/cli/App$1.class
+com/banktracker/cli/Agencia.class
+com/banktracker/cli/Conexao.class
+com/banktracker/cli/FinalizadorProcessos.class
+com/banktracker/cli/ProcessoIndesejado.class
